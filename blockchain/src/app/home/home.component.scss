@@ -54,7 +54,7 @@
   background-color: white;
   border-color: white;
   color: #d43f10;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 #background-video {
   height: 100vh;
@@ -66,4 +66,50 @@
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+.explore{
+  background-color: black;
+  background-image: url(https://cdn.thegameawards.com/frontend/pngs/home-news-slidder-desk.png);
+  width: 100%;
+  max-width: 100%;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.explore-card {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: block;
+  background-image: url(https://cdn.thegameawards.com/frontend/jpegs/insider-bg-desk.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  margin: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  width: 45%;
+  .title {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 5vw!important;
+    display: block;
+  }
+  p {
+    color: white;
+    text-align: center;
+    margin-top: 6vh;
+    font-size: 2vw;
+    display: block;
+  }
+  .jury {
+  }
+  .nominees {
+    background-image: url(https://cdn.thegameawards.com/frontend/jpegs/insider-bg-desk.jpg);
+  }
+
+}
+
+.explore-card:hover{
+
 }
