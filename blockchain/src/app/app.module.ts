@@ -9,6 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
