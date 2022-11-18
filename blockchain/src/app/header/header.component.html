@@ -1,0 +1,66 @@
+<div  >
+
+  <mat-toolbar class="header" color="primary">
+
+    <div class="desktop-header  col col-md-8" *ngIf="!mobileQuery.matches">
+      <div class="header-logo" style="margin-right: 1.3vw">
+        <a routerLink="">
+          <svg class="h-auto w-42 mt-[1px]" xmlns="http://www.w3.org/2000/svg" width="41.632" height="43.297">
+            <path
+              d="m31.229 29.993 1.913-1.848 1.9-5.674-3.8 3.8Zm-4.051-7.512 11.09-11.08-1.58 5.362-9.521 9.274Zm-4.062-3.965-.011 3.546 16.947-16.7 1.58-5.363ZM8.6 28.188l2.45 2.407-1.257 1.257.978 2.558 2.074-2.042 2.257 2.225-3.073 3.063 1 2.536 3.879-3.826 2.139 2.106-4.825 4.825h3.729l3-2.955 3 2.955h3.546L6.649 22.47ZM1.593 5.363 19 22.621l-.011.011-.011 3.546 1.816-1.784 2.332 2.311-.011 3.385 1.73-1.676 2.375 2.354v3.245l1.655-1.612 2.02 2 .989-2.547L0 .011Zm3.428 11.563 9.9 9.79-.011 3.536 1.795-1.773 2.278 2.257-.011 3.482 1.784-1.73 2.364 2.343v3.278l1.666-1.623 3.815 3.783.989-2.547L3.444 11.565Z"
+              fill="#fff"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="header-links">
+        <a routerLink="" routerLinkActive="active_link" class="header-link">HOME</a>
+        <a routerLink="news" routerLinkActive="active_link" class="header-link disabled">NEWS</a>
+        <a routerLink="about" routerLinkActive="active_link" class="header-link">ABOUT</a>
+        <a routerLink="jury" routerLinkActive="active_link" class="header-link disabled">JURY</a>
+        <a routerLink="nominees" routerLinkActive="active_link" class="header-link disabled">NOMINEES</a>
+      </div>
+    </div>
+
+    <div class="header-logo col col-md-1" *ngIf="mobileQuery.matches">
+      <a routerLink="">
+        <svg class="h-auto w-42 mt-[1px]" xmlns="http://www.w3.org/2000/svg" width="41.632" height="43.297">
+          <path
+            d="m31.229 29.993 1.913-1.848 1.9-5.674-3.8 3.8Zm-4.051-7.512 11.09-11.08-1.58 5.362-9.521 9.274Zm-4.062-3.965-.011 3.546 16.947-16.7 1.58-5.363ZM8.6 28.188l2.45 2.407-1.257 1.257.978 2.558 2.074-2.042 2.257 2.225-3.073 3.063 1 2.536 3.879-3.826 2.139 2.106-4.825 4.825h3.729l3-2.955 3 2.955h3.546L6.649 22.47ZM1.593 5.363 19 22.621l-.011.011-.011 3.546 1.816-1.784 2.332 2.311-.011 3.385 1.73-1.676 2.375 2.354v3.245l1.655-1.612 2.02 2 .989-2.547L0 .011Zm3.428 11.563 9.9 9.79-.011 3.536 1.795-1.773 2.278 2.257-.011 3.482 1.784-1.73 2.364 2.343v3.278l1.666-1.623 3.815 3.783.989-2.547L3.444 11.565Z"
+            fill="#fff"></path>
+        </svg>
+      </a>
+    </div>
+
+
+    <div class="header-user col col-md-4">
+      <!-- desktop view -->
+      <button type="button" class="login-button">
+            <img src="https://thegameawards.com/svgs/login_icon.svg" alt="sign in">
+            <span>&nbsp;SIGN IN</span>
+      </button>
+
+      <!-- mobile menu -->
+      <button *ngIf="mobileQuery.matches" mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav>
+      <mat-nav-list>
+        <!-- urls -->
+        <a mat-list-item routerLink="" routerLinkActive="active_link" class="header-link">HOME</a>
+        <a mat-list-item routerLink="news" routerLinkActive="active_link" class="header-link disabled">NEWS</a>
+        <a mat-list-item routerLink="about" routerLinkActive="active_link" class="header-link">ABOUT</a>
+        <a mat-list-item routerLink="jury" routerLinkActive="active_link" class="header-link disabled">JURY</a>
+        <a mat-list-item routerLink="nominees" routerLinkActive="active_link" class="header-link disabled">NOMINEES</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

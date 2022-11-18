@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "blockchain"
+  "defaultProject": "blockchain",
+  "cli": {
+    "analytics": "8624b9c3-da33-4f4f-a784-edba2caf83cd"
+  }
 }
