@@ -1,7 +1,5 @@
-<div  >
-
+<div>
   <mat-toolbar class="header" color="primary">
-
     <div class="desktop-header  col col-md-8" *ngIf="!mobileQuery.matches">
       <div class="header-logo" style="margin-right: 1.3vw">
         <a routerLink="">
@@ -20,7 +18,6 @@
         <a routerLink="nominees" routerLinkActive="active_link" class="header-link disabled">NOMINEES</a>
       </div>
     </div>
-
     <div class="header-logo col col-md-1" *ngIf="mobileQuery.matches">
       <a routerLink="">
         <svg class="h-auto w-42 mt-[1px]" xmlns="http://www.w3.org/2000/svg" width="41.632" height="43.297">
@@ -30,13 +27,11 @@
         </svg>
       </a>
     </div>
-
-
     <div class="header-user col col-md-4">
       <!-- desktop view -->
       <button type="button" class="login-button">
-            <img src="https://thegameawards.com/svgs/login_icon.svg" alt="sign in">
-            <span>&nbsp;SIGN IN</span>
+        <img src="https://thegameawards.com/svgs/login_icon.svg" alt="sign in">
+        <span>&nbsp;SIGN IN</span>
       </button>
 
       <!-- mobile menu -->
@@ -45,6 +40,9 @@
       </button>
     </div>
   </mat-toolbar>
+  <div style="width: 100%; background-color: #901f07">
+    <p style="text-align: center; padding: 1vh; font-size:large; margin: 0; color: white">{{releaseDays}} {{releaseDays > 1 ? 'DAYS' : 'DAY' }} TILL THE SHOW</p>
+  </div>
 
   <mat-sidenav-container class="example-sidenav-container">
     <mat-sidenav #snav>

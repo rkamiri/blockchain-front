@@ -1,5 +1,9 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {MediaMatcher} from "@angular/cdk/layout";
+import * as moment from "moment/moment";
+import { tz } from 'moment-timezone';
+
+
 
 @Component({
   selector: 'app-header',
@@ -9,7 +13,7 @@ import {MediaMatcher} from "@angular/cdk/layout";
 export class HeaderComponent implements OnInit {
 
   mobileQuery: MediaQueryList;
-
+  releaseDays: number = 0;
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
@@ -23,6 +27,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const start = moment(new Date(), "YYYY-MM-DD");
+    const end = moment("2022-12-5", "YYYY-MM-DD");
+
+    this.releaseDays = end.diff(start, 'days');
+
   }
 
 }
