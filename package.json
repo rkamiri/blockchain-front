@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@web3-onboard/core": "^2.11.1",
+    "@web3-onboard/injected-wallets": "^2.4.0"
+  }
+}

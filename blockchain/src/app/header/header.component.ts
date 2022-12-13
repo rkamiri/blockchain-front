@@ -1,8 +1,6 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {MediaMatcher} from "@angular/cdk/layout";
 import * as moment from "moment/moment";
-import { tz } from 'moment-timezone';
-
 
 
 @Component({
@@ -28,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     const start = moment(new Date(), "YYYY-MM-DD");
-    const end = moment("2022-12-5", "YYYY-MM-DD");
+    const end = moment("2022-12-31", "YYYY-MM-DD");
 
     this.releaseDays = end.diff(start, 'days');
 
