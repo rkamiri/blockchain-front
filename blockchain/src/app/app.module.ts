@@ -15,6 +15,8 @@ import {MatButtonModule} from "@angular/material/button";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { NomineesComponent } from './nominees/nominees.component';
+import { JuryComponent } from './jury/jury.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    NomineesComponent,
+    JuryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,9 @@ export class HomeComponent implements OnInit {
     this.state++;
   }
 
-  constructor() { }
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("The game awards");
+  }
 
   ngOnInit(): void {
     const video = document.getElementById("background-video") as HTMLVideoElement;
