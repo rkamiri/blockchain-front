@@ -21,9 +21,11 @@
     </div>
     <div class="col offset-1 col-md-4">
       <h3 style="font-size: xx-large">REGARDING PR & MEDIA</h3>
-      <button>GAMEAWARDS@FORTYSEVEN.COM</button>
+      <button [ngClass]="{'clicked-btn' : buttons.medias.clicked}" (click)="clickOnButton(buttons.medias)">
+        {{!buttons.medias.clicked ? buttons.medias.url : 'LINK COPIED'}}</button>
       <h3 style="font-size: xx-large">REGARDING SPONSORSHIP OR PARTNERSHIP</h3>
-      <button>INFO@THEGAMEAWARDS.COM</button>
+      <button [ngClass]="{'clicked-btn' : buttons.partnership.clicked}" (click)="clickOnButton(buttons.partnership)">
+        {{!buttons.partnership.clicked ? buttons.partnership.url : 'LINK COPIED'}}</button>
     </div>
   </div>
 </div>

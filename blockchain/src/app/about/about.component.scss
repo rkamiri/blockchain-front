@@ -70,3 +70,12 @@ button {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+.clicked-btn{
+  background-color: #d43f10;
+  border-color: #d43f10;
+}
+
+button:hover {
+  background-color: #d43f10;
+  border-color: #d43f10;}
