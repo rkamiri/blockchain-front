@@ -72,7 +72,7 @@ button {
   padding-bottom: 120px;
 }
 
-.clicked-btn{
+.clicked-btn {
   background-color: #d43f10;
   border-color: #d43f10;
 }
@@ -81,19 +81,22 @@ button:hover {
   background-color: #d43f10;
   border-color: #d43f10;
 }
+
 .jury {
   padding-top: 2vh;
-  max-width: 100%!important;
-  background: url(https://cdn.thegameawards.com/frontend/bgs/bg-voting--us.svg) no-repeat, linear-gradient(180deg,#000000 46.83%,rgba(0,0,0,0) 97.23%);
+  max-width: 100% !important;
+  background: url(https://cdn.thegameawards.com/frontend/bgs/bg-voting--us.svg) no-repeat, linear-gradient(180deg, #000000 46.83%, rgba(0, 0, 0, 0) 97.23%);
 }
-.jury-band{
+
+.jury-band {
   max-width: 100%;
   background-color: #aa320d;
   padding: 2vh;
   text-align: center;
 }
+
 .jury-band h2 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-size: xx-large;
 }

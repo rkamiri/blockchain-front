@@ -11,7 +11,7 @@
 <div class="container games-band">
   <h2>GAMES</h2>
 </div>
-<div class="container" style="max-width: 100%; background-color: black">
+<div class="container" style="max-width: 100%;background: url(https://cdn.thegameawards.com/frontend/bgs/bg-voting--us.svg) no-repeat, linear-gradient(rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);">
   <div class="row" style=" width: 85%; margin: auto">
     <div class="col col-md-3" *ngFor="let game of games" style="margin-top: 4vh">
       <div class="wrapper" style="min-height: 56vh">
@@ -35,7 +35,7 @@
         <div class="productSpecifications">
           <h1 style="max-height: 8vh; height: 8vh">{{game.name}}</h1>
           <p style="max-height: 10vh; height: 10vh">{{game.description}}</p>
-          <button>VOTE NOW →</button>
+          <button>VOTE NOW <label>→</label></button>
         </div>
       </div>
     </div>
