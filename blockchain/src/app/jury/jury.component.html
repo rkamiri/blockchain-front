@@ -1,1 +1,23 @@
-<p>jury works!</p>
+<video id="background-video" [autoplay]="true" [loop]="true" [muted]="true">
+  <source src="https://thegameawards.com/video/jury_bnr__d.mp4" type="video/mp4">
+</video>
+<div class="container home">
+  <div class="col col-md-6 offset-md-1">
+    <h2 class="title">VOTING</h2>
+    <h2 class="title open-title">JURY</h2>
+    <h3 class="subtitle">NOMINATIONS FOR THE GAME AWARDS ARE SELECTING BY A VOTING JURY OF OVER 100 LEADING MEDIA AND
+      INFLUENCER OUTLETS ACROSS THE GLOBE.</h3>
+  </div>
+</div>
+<div class="container jury-band">
+  <h2>JURY</h2>
+</div>
+<div class="container jury">
+  <div class="row" style="width: 85%; margin: auto;">
+    <div class="col col-md-3" style="padding: 1.5vw" *ngFor="let juryItem of jury">
+      <img class="w-100" [src]="juryItem.url">
+      <p style="font-size: xx-large; padding-top: 2vh; line-height: 4vh">{{juryItem.title}}</p>
+    </div>
+  </div>
+
+</div>
