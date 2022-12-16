@@ -4,94 +4,45 @@
 <div class="container home">
   <div class="col col-md-6 offset-md-1">
     <h2 class="title open-title">NOMINEES</h2>
-    <h3 class="subtitle">THE GAME AWARDS AIRS LIVE AND FREE ON THURSDAY, DEC 8 AT 7:30PM ET, 4:30PM PT. THE SHOW AIRS ACROSS ALL MAJOR DIGITAL, SOCIAL AND GAMING PLATFORMS AROUND THE WORLD.</h3>
+    <h3 class="subtitle">THE GAME AWARDS AIRS LIVE AND FREE ON THURSDAY, DEC 8 AT 7:30PM ET, 4:30PM PT. THE SHOW AIRS
+      ACROSS ALL MAJOR DIGITAL, SOCIAL AND GAMING PLATFORMS AROUND THE WORLD.</h3>
   </div>
 </div>
-
-<div>
-
-  <div class="container">
-    <div class="card">
-      <h2>North</h2>
-      <i class="fas fa-arrow-right"></i>
-      <p>a lonely trip.</p>
-      <div class="pic"></div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-github"></i>
+<div class="container games-band">
+  <h2>GAMES</h2>
+</div>
+<div class="container" style="max-width: 100%; background-color: black">
+  <div class="row" style=" width: 85%; margin: auto">
+    <div class="col col-md-3" *ngFor="let game of games" style="margin-top: 4vh">
+      <div class="wrapper" style="min-height: 56vh">
+        <div class="overviewInfo" style="{{'background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('+ game.url+');'}} background-size: cover;">
+          <div class="productinfo">
+            <div class="grouptext">
+              <h3>PLATFORM</h3>
+              <p>{{game.platform}}</p>
+            </div>
+            <div class="grouptext">
+              <h3>RELEASE</h3>
+              <p>{{game.release}}</p>
+            </div>
+            <div class="grouptext">
+              <h3>PRICE</h3>
+              <p>{{game.price}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- overview info -->
+        <div class="productSpecifications">
+          <h1 style="max-height: 8vh; height: 8vh">{{game.name}}</h1>
+          <p style="max-height: 10vh; height: 10vh">{{game.description}}</p>
+          <button>VOTE NOW →</button>
+        </div>
       </div>
-      <button>
-      </button>
-    </div>
-    <div class="card card2">
-      <h2>Vauxhall</h2>
-      <i class="fas fa-arrow-right"></i>
-      <p>a lonely trip.</p>
-      <div class="pic"></div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-github"></i>
-      </div>
-      <button>
-      </button>
     </div>
   </div>
 
-  <a href="https://dribbble.com/YancyMin" class="dr-url" target="_blank"><img class="dr" src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+
+
 
 
 
