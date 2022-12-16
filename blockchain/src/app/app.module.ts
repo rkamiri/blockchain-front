@@ -18,6 +18,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { NomineesComponent } from './nominees/nominees.component';
 import { JuryComponent } from './jury/jury.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

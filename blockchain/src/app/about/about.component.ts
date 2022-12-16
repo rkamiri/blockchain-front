@@ -9,6 +9,7 @@ import {Clipboard} from '@angular/cdk/clipboard';
 })
 export class AboutComponent implements OnInit {
 
+
   buttons = {
     medias:  {clicked: false, url: "GAMEAWARDS@FORTYSEVEN.COM"},
     partnership: {clicked: false, url: "INFO@THEGAMEAWARDS.COM"}
