@@ -17,6 +17,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { NomineesComponent } from './nominees/nominees.component';
 import { JuryComponent } from './jury/jury.component';
+import { CandidateComponent } from './candidate/candidate.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { JuryComponent } from './jury/jury.component';
     HomeComponent,
     AboutComponent,
     NomineesComponent,
-    JuryComponent
+    JuryComponent,
+    CandidateComponent
   ],
   imports: [
     BrowserModule,

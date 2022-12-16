@@ -15,7 +15,6 @@ export class NomineesComponent implements OnInit {
     {name: "Returnal", platform: "PS5", price: "$70 - $80", description: "Break the cycle of chaos on an always-changing alien planet.", release: "Spring 2022", url:"https://image.api.playstation.com/vulcan/ap/rnd/202011/1621/fYZQHZ42eXXUt7c6D5YjLrq5.png"},
     {name: "Ghost of Tsushima Director's Cut", platform: "PS4, PS5", price: "$70 - $80", description: "A storm is coming. Discover the expanded Ghost of Tsushima experience in this Director’s Cut.", release: "Fall 2022", url:"https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/c16gs6a7lbAYzPf7ZTikbH1c.png"},
     {name: "DEATH STRANDING DIRECTOR'S CUT", platform: "PS5", price: "$70 - $80", description: "Connect a fractured society in the definitive DEATH STRANDING experience for PlayStation®5.", release: "Fall 2022", url:"https://cdn1.epicgames.com/offer/0a9e3c5ab6684506bd624a849ca0cf39/EGS_DEATHSTRANDINGDIRECTORSCUT_KOJIMAPRODUCTIONS_Expansion_S2_1200x1600-5f99e16507795f9b497716b470cfd876"},
-
   ];
 
   constructor() { }
