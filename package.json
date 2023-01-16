@@ -2,6 +2,7 @@
   "dependencies": {
     "@web3-onboard/core": "^2.11.1",
     "@web3-onboard/injected-wallets": "^2.4.0",
-    "ngx-snowf": "^0.0.1"
+    "ngx-snowf": "^0.0.1",
+    "web3": "^1.8.1"
   }
 }
