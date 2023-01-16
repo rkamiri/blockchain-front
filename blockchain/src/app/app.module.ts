@@ -18,6 +18,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { NomineesComponent } from './nominees/nominees.component';
 import { JuryComponent } from './jury/jury.component';
 import { CandidateComponent } from './candidate/candidate.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CandidateComponent } from './candidate/candidate.component';
     AboutComponent,
     NomineesComponent,
     JuryComponent,
-    CandidateComponent
+    CandidateComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

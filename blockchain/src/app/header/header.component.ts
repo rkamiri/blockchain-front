@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {MediaMatcher} from "@angular/cdk/layout";
 import * as moment from "moment/moment";
+import {ContractService} from "../contract.service";
 
 
 @Component({
@@ -13,8 +14,10 @@ export class HeaderComponent implements OnInit {
   mobileQuery: MediaQueryList;
   releaseDays: number = 0;
   private _mobileQueryListener: () => void;
+  private _contractService: ContractService;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, contractService: ContractService) {
+    this._contractService = contractService;
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -31,5 +34,4 @@ export class HeaderComponent implements OnInit {
     this.releaseDays = end.diff(start, 'days');
 
   }
-
 }
