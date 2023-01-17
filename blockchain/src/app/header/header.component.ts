@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, contractService: ContractService) {
     this._contractService = contractService;
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
