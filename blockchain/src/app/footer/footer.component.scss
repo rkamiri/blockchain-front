@@ -8,6 +8,18 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100%;
+  @media screen and (max-width: 992px) {
+    background-size: 400%;
+  }
+}
+
+#footer-img {
+  @media screen and (max-width: 992px) {
+    margin-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
 .links {
@@ -16,6 +28,12 @@
   color: white;
   line-height: 19px;
   font-size: medium;
+  @media screen and (max-width: 992px) {
+    font-size:xx-large;
+    line-height: normal;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 .links a {
