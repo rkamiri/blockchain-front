@@ -19,6 +19,10 @@ import { NomineesComponent } from './nominees/nominees.component';
 import { JuryComponent } from './jury/jury.component';
 import { CandidateComponent } from './candidate/candidate.component';
 import { SigninComponent } from './signin/signin.component';
+import { AccountComponent } from './account/account.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -31,7 +35,8 @@ import { SigninComponent } from './signin/signin.component';
     NomineesComponent,
     JuryComponent,
     CandidateComponent,
-    SigninComponent
+    SigninComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,11 @@ import { SigninComponent } from './signin/signin.component';
     MatButtonModule,
     NgbModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

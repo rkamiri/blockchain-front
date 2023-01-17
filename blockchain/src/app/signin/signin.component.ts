@@ -5,7 +5,9 @@ declare const window: any;
   selector: 'sign-in',
   template: `
     <span *ngIf="!isConnected" (click)="connectToMetaMask()">&nbsp;SIGN IN</span>
+    <span  *ngIf="isConnected"><a style="color: white; text-decoration: none" href="/account">&nbsp;ACCOUNT</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
     <span *ngIf="isConnected" (click)="disconnectFromMetaMask()">&nbsp;SIGN OUT</span>
+
   `
 })
 export class SigninComponent{

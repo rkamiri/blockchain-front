@@ -1,0 +1,20 @@
+.form-control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.form-control:focus {
+  border-color: #555;
+  outline: none;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 14px;
+}
