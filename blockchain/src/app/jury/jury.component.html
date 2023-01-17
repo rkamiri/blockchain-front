@@ -14,7 +14,7 @@
 </div>
 <div class="container jury">
   <div class="row" style="width: 85%; margin: auto;">
-    <div class="col col-md-3" style="padding: 1.5vw" *ngFor="let juryItem of jury">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl3 col-xxl-3" style="padding: 1.5vw" *ngFor="let juryItem of jury">
       <img class="w-100" [src]="juryItem.url">
       <p style="font-size: xx-large; padding-top: 2vh; line-height: 4vh">{{juryItem.title}}</p>
     </div>

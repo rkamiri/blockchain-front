@@ -103,8 +103,25 @@ button:hover {
 
 
 @media screen and(max-width: 992px){
-
-}
-@media screen and(max-width: 768.5px){
-
+  .home{
+    background-color: black;
+    padding: 0;
+  }
+  .title{
+    font-size: 16vw;
+    margin-top: 0;
+    padding-top: 6vh;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .intro {
+    font-size: 4.5vw;
+  }
+  button {
+    font-size: 3vw;
+  }
+  h3 {
+    font-size: 3.2vw;
+  }
 }
