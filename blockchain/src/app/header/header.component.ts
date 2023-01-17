@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     const start = moment(new Date(), "YYYY-MM-DD");
-    const end = moment("2022-12-31", "YYYY-MM-DD");
+    const end = moment("2023-12-31", "YYYY-MM-DD");
 
     this.releaseDays = end.diff(start, 'days');
 

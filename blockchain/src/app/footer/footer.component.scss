@@ -14,7 +14,17 @@
   margin: 1vw;
   margin-top: 8vh;
   color: white;
-  opacity: 0.5;
   line-height: 19px;
   font-size: medium;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+}
+.links a:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.85;
 }
