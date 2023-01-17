@@ -11,10 +11,9 @@ export class ResultsComponent implements OnInit {
   }
 
   columnChartOptions = {
+    backgroundColor: "#000000",
+    theme: "dark1",
     animationEnabled: true,
-    title: {
-      text: 'First round results',
-    },
     data: [
       {
         type: 'column',
@@ -33,9 +32,8 @@ export class ResultsComponent implements OnInit {
 
   columnChartOptions2 = {
     animationEnabled: true,
-    title: {
-      text: 'Final round results',
-    },
+    backgroundColor: "#000000",
+    theme: "dark1",
     data: [
       {
         type: 'column',

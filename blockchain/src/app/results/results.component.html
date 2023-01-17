@@ -1,19 +1,23 @@
 <div style="background-color: black;
 width: 100%;">
-
-  <h2>First round results</h2>
-  <canvasjs-chart
+  <br>
+  <div class="container games-band"><h2>First round results</h2></div>
+  <br>
+  <canvasjs-chart class="canva"
     [options]="columnChartOptions"
-    [styles]="{width: '50vw', height: '50vh',  overflow: 'hidden', margin: 'auto', background: 'black' }"
+    [styles]="{width: '50vw', height: '50vh',  overflow: 'hidden', margin: 'auto', fontColor: '#060606', backgroundColor: '#050505' }"
   ></canvasjs-chart>
-
-  <h2>Final round results</h2>
+  <br>
+  <div class="container games-band"><h2>Final round results</h2></div>
+  <br>
   <canvasjs-chart
     [options]="columnChartOptions2"
-    [styles]="{width: '50vw', height: '50vh',  overflow: 'hidden', margin: 'auto', background: 'black' }"
+    [styles]="{width: '50vw', height: '50vh',  overflow: 'hidden', margin: 'auto', backgroundColor: 'black' }"
   ></canvasjs-chart>
-  <h2>Winner</h2>
-  <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4 col-1 col-sm-12" style="margin:auto; margin-top: 4vh">
+  <br>
+  <div class="container games-band"><h2>Winner</h2></div>
+  <br>
+  <div class="col col-12" style="margin:auto; margin-top: 4vh; display: flex; align-content: center; justify-content: center;">
     <div class="wrapper" style="min-height: 56vh">
       <div class="overviewInfo" style="{{'background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('+ game.url+');'}} background-size: cover;">
         <div class="productinfo">
@@ -38,6 +42,4 @@ width: 100%;">
       </div>
     </div>
   </div>
-
-
 </div>
