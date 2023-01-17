@@ -29,7 +29,9 @@ export class AccountComponent implements OnInit {
     this.accountService = accountService;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isAdminFn();
+  }
   get f() { return this.form.controls; }
   onSubmit() {
     this.submitted = true;
@@ -39,14 +41,13 @@ export class AccountComponent implements OnInit {
     }
 
     this.loading = true;
-
   }
 
 
   removeJury(address: any) {
     this.accountService.removeJury(address).then(() => {
       this.accountService.getJury().then(result => {
-        this.juryList = result.data;
+        this.juryList = result;
       })
     })
   }

@@ -13,25 +13,39 @@ export class AccountService {
   }
   //add jury member
   addJury(address: any, name: string, image: string): Promise<any> {
-    return new Promise(() => null);
+    return new Promise<any>((resolve, reject) => resolve(
+      {
+        data:()=>{
+          return null
+        }
+      }));
   }
   //get all jury
   getJury(): Promise<any> {
-    return new Promise(() => [
+    return new Promise<any>((resolve, reject) => resolve(
       {
-        name: "test",
-        address: "test",
-        image: "test",
-      },
-      {
-        name: "test2",
-        address: "test2",
-        image: "test2",
-      }
-    ]);
+        data :[
+            {
+              name: "test",
+              address: "test",
+              image: "test",
+            },
+            {
+              name: "test2",
+              address: "test2",
+              image: "test2",
+            }
+          ]
+
+      }));
   }
 
   isAdmin(): Promise<any> {
-    return  new Promise(() =>true);
+    return new Promise<any>((resolve, reject) => resolve(
+      {
+        data:()=>{
+          return false
+        }
+      }));
   }
 }

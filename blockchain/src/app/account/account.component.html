@@ -1,10 +1,10 @@
 <div style="margin: auto; width: 80%; background-color: black">
   <div *ngIf="isAdmin">
     <h2>Add a new jury</h2>
-    <input class="input-group-lg " required placeholder="MetaMask Id : 0x....">
+    <input class="input-group-lg " #juryToAdd required placeholder="MetaMask Id : 0x...."><button (click)="addJury(juryToAdd.value.toString())">Add</button>
     <h2>Remove a jury member</h2>
-    <p *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">FDP {{i}}
-      <mat-icon style="color: red; vertical-align: middle;" (click)="removeJury(i)">highlight_off</mat-icon>
+    <p *ngFor="let jury of juryList">FDP {{jury.name}}
+      <mat-icon style="color: red; vertical-align: middle; cursor:pointer;" (click)="removeJury(jury.address)">highlight_off</mat-icon>
     </p>
   </div>
   <div *ngIf="hasVote">
