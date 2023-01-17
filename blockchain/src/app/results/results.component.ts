@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {BarChartOption, ChartData, ChartView} from "ngx-chart";
+import {MediaMatcher} from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-results',
@@ -7,7 +8,17 @@ import {BarChartOption, ChartData, ChartView} from "ngx-chart";
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
   ngOnInit(): void {
+  }
+  constructor(media: MediaMatcher, changeDetectorRef: ChangeDetectorRef) {
+    this.mobileQuery = media.matchMedia('(max-width: 768px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   columnChartOptions = {
