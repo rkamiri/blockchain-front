@@ -222,3 +222,22 @@ button:hover {
     opacity: 100;
   }
 }
+
+@media screen and(max-width: 992px){
+  .title{
+    font-size: 16vw;
+    margin-top: 6vh;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .intro {
+    font-size: 4.5vw;
+  }
+  button {
+    font-size: 3vw;
+  }
+  h3 {
+    font-size: 3.2vw;
+  }
+}
