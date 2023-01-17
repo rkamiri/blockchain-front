@@ -85,20 +85,26 @@
   max-width: 100%;
   padding-top: 10vh;
   padding-bottom: 10vh;
+  @media screen and (max-width: 992px) {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 }
 
 .explore-card {
-  background-repeat: no-repeat;
-  background-position: center bottom;
   display: block;
   background-image: url(https://cdn.thegameawards.com/frontend/jpegs/insider-bg-desk.jpg);
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-size: 100%;
   margin: auto;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  width: 45%;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 
   .title {
     margin: 0;
