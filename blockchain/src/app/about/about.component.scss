@@ -30,7 +30,7 @@ button {
   padding: 10px 30px;
   display: block;
   margin-top: 10px;
-  font-size: large;
+  font-size: 1vw;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -66,8 +66,8 @@ button {
   background-image: url("https://cdn.thegameawards.com/frontend/bgs/nominee-bg-d.jpg");
   min-width: 100%;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100%;
+  background-position: center;
+  background-size: cover;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -81,3 +81,26 @@ button:hover {
   background-color: #d43f10;
   border-color: #d43f10;
 }
+h3 {
+  font-size: xx-large;
+}
+
+@media screen and(max-width: 992px){
+  .title{
+    font-size: 16vw;
+    margin-top: 6vh;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .intro {
+    font-size: 4.5vw;
+  }
+  button {
+    font-size: 3vw;
+  }
+  h3 {
+    font-size: 3.2vw;
+  }
+}
+

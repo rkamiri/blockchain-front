@@ -3,7 +3,7 @@
   <source src="https://thegameawards.com/video/abt-bnr-d.mp4" type="video/mp4">
 </video>
 <div class="container home">
-  <div class="col col-md-6 offset-md-1">
+  <div class="col-10 col-sm-10 col-md-10 col-lg-6 offset-1">
     <h2 class="title open-title">ABOUT</h2>
     <h3 class="subtitle">THE GAME AWARDS RECOGNIZES AND UPHOLDS CREATIVE AND TECHNICAL EXCELLENCE IN THE GLOBAL VIDEO
       GAME
@@ -16,16 +16,16 @@
 </div>
 <div class="container background-dark">
   <div class="row">
-    <div class="col col-md-4 offset-1 align-content-center">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1 align-content-center">
       <h2 style="font-size: 5.2vw">CONTACT <label style="color: #d43f10">US</label></h2>
       <p style="font-size: large; margin-top: 5vh; line-height: 4vh">IF YOU HAVE ANY QUESTIONS OR REQUESTS, PLEASE REACH
         OUT AT THE EMAILS BELOW OR FOLLOW US ON SOCIAL CHANNELS.</p>
     </div>
-    <div class="col offset-1 col-md-4">
-      <h3 style="font-size: xx-large">REGARDING PR & MEDIA</h3>
+    <div class="col-12 col-sm-12 col-md-12 offset-lg-1 col-lg-4">
+      <h3>REGARDING PR & MEDIA</h3>
       <button [ngClass]="{'clicked-btn' : buttons.medias.clicked}" (click)="clickOnButton(buttons.medias)">
         {{!buttons.medias.clicked ? buttons.medias.url : 'LINK COPIED'}}</button>
-      <h3 style="font-size: xx-large">REGARDING SPONSORSHIP OR PARTNERSHIP</h3>
+      <h3>REGARDING SPONSORSHIP OR PARTNERSHIP</h3>
       <button class="hero-btn" [ngClass]="{'clicked-btn' : buttons.partnership.clicked}"
               (click)="clickOnButton(buttons.partnership)">
         {{!buttons.partnership.clicked ? buttons.partnership.url : 'LINK COPIED'}}</button>
