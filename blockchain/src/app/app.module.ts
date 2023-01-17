@@ -23,6 +23,10 @@ import { AccountComponent } from './account/account.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {ResultsComponent} from "./results/results.component";
+import {NgxChartModule} from "ngx-chart";
+import {MatTabsModule} from "@angular/material/tabs";
+import {CanvasJSChart} from "../assets/canvasjs.angular.component";
 
 
 @NgModule({
@@ -36,7 +40,9 @@ import {MatInputModule} from "@angular/material/input";
     JuryComponent,
     CandidateComponent,
     SigninComponent,
-    AccountComponent
+    AccountComponent,
+    ResultsComponent,
+    CanvasJSChart
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,9 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxChartModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

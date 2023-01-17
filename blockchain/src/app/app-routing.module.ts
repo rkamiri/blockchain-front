@@ -6,6 +6,7 @@ import {NomineesComponent} from "./nominees/nominees.component";
 import {JuryComponent} from "./jury/jury.component";
 import {CandidateComponent} from "./candidate/candidate.component";
 import {AccountComponent} from "./account/account.component";
+import {ResultsComponent} from "./results/results.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'candidate', component: CandidateComponent},
   {path: 'account', component: AccountComponent},
+  {path: 'results', component: ResultsComponent},
 ];
 
 @NgModule({
