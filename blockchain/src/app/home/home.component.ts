@@ -32,4 +32,7 @@ export class HomeComponent implements OnInit {
     video.play().then(r => {});
   }
 
+  goTo(go: string) {
+    location.href = '/' + go;
+  }
 }

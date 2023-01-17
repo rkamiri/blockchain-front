@@ -9,6 +9,12 @@
   margin-top: 10vh;
   font-size: 6vw;
   color: white;
+  @media screen and (max-width: 768.5px){
+    font-size: 12vw;
+  }
+  @media screen and (max-width: 992px){
+    font-size: 11vw;
+  }
 }
 
 .open-title {
@@ -22,6 +28,12 @@
   margin-top: 4vh;
   font-size: 2vw;
   margin-left: .2vw;
+  @media screen and (max-width: 768.5px){
+    font-size: 6vw;
+  }
+  @media screen and (max-width: 992px){
+    font-size: 4vw;
+  }
 }
 
 .calendar-btn {
@@ -59,8 +71,15 @@
 .open-btn:hover {
   background-color: white;
   border-color: white;
-  color: #d43f10;
   border-radius: 4px;
+}
+.open-btn a {
+  color: white;
+  text-decoration: none;
+}
+.open-btn:hover a {
+  color: red;
+  text-decoration: none;
 }
 
 #background-video {
@@ -83,27 +102,37 @@
 
   width: 100%;
   max-width: 100%;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   @media screen and (max-width: 992px) {
     padding-top: 2vh;
     padding-bottom: 2vh;
   }
 }
+.card-ctnr {
+  text-decoration: none;
+}
 
+.explore-card:hover {
+  box-shadow: 0px 0px 20px 9px rgba(255, 105, 58, 0.6);
+}
 .explore-card {
+  cursor: pointer;
   display: block;
   background-image: url(https://cdn.thegameawards.com/frontend/jpegs/insider-bg-desk.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   margin: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  text-decoration: none;
 
   @media screen and (max-width: 992px) {
     padding-top: 2vh;
     padding-bottom: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
   .title {
@@ -179,6 +208,14 @@
   }
   100% {
     transform: translate(-100%, 0);
+  }
+}
+#high-img {
+  width: 20vw;
+}
+@media screen and (max-width: 992px){
+  #high-img {
+    width: 80vw;
   }
 }
 

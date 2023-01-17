@@ -4,13 +4,11 @@
 </video>
 <div class="container home">
   <div class="row" style="padding: 5vw">
-    <div class="col col-md-10 offset-md-2">
-      <img src="https://thegameawards.com/svgs/logo-with-text.svg">
+    <div class="col col-md-10 offset-lg-2">
+      <img id="high-img" src="https://thegameawards.com/svgs/logo-with-text.svg">
       <h3 class="title"><label class="open-title">DECEMBER</label> 8</h3>
       <h3 class="subtitle"><label>MICROSOFT THEATER, LOS ANGELES</label></h3>
-      <button class="calendar-btn" color="primary" mat-raised-button>ADD EVENT TO CALENDAR</button>
-      <br>
-      <button class="open-btn">VOTE NOW</button>
+      <button class="open-btn"><a href="/nominees" >VOTE NOW</a></button>
     </div>
   </div>
   <div class="row scroller">
@@ -76,12 +74,12 @@
 </div>
 
 <div class="container explore">
-  <div class="row">
-    <div class="col-11 col-sm-11 col-md-11 col-lg-5 col-xl-5 col-xxl-5 explore-card nominees">
+  <div class="row" >
+    <div class="col-11 col-sm-11 col-md-11 col-lg-5 col-xl-5 col-xxl-5 explore-card nominees" style="display: block" (click)="goTo('nominees')">
       <p class="title">NOMINEES</p>
       <p>EXPLORE THE NOMINEES AND VOTE NOW</p>
     </div>
-    <div class="col-11 col-sm-11 col-md-11 col-lg-5 col-xl-5 col-xxl-5 explore-card jury">
+    <div class="col-11 col-sm-11 col-md-11 col-lg-5 col-xl-5 col-xxl-5 explore-card jury" style="display: block" (click)="goTo('jury')">
       <p class="title">JURY</p>
       <p>MET OUR WORLD CLASS JURY</p>
     </div>
