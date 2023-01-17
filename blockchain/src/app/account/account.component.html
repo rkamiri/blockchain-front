@@ -4,7 +4,7 @@
     <input class="input-group-lg " required placeholder="MetaMask Id : 0x....">
     <h2>Remove a jury member</h2>
     <p *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">FDP {{i}}
-      <mat-icon style="color: red; vertical-align: middle;">highlight_off</mat-icon>
+      <mat-icon style="color: red; vertical-align: middle;" (click)="removeJury(i)">highlight_off</mat-icon>
     </p>
   </div>
   <div *ngIf="hasVote">

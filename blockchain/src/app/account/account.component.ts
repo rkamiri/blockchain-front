@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AccountService} from "../services/account.service";
 
 @Component({
   selector: 'app-account',
@@ -21,9 +22,11 @@ export class AccountComponent implements OnInit {
   });
   loading = false;
   submitted = false;
+  juryList: any;
+  accountService: AccountService;
 
-  constructor(private formBuilder: FormBuilder) {
-
+  constructor(private formBuilder: FormBuilder, accountService: AccountService) {
+    this.accountService = accountService;
   }
 
   ngOnInit(): void {}
@@ -37,6 +40,37 @@ export class AccountComponent implements OnInit {
 
     this.loading = true;
 
+  }
+
+
+  removeJury(address: any) {
+    this.accountService.removeJury(address).then(() => {
+      this.accountService.getJury().then(result => {
+        this.juryList = result.data;
+      })
+    })
+  }
+  addJury(address: any) {
+    this.accountService.removeJury(address).then(() => {
+      this.accountService.getJury().then(result => {
+        this.juryList = result.data;
+      })
+    })
+  }
+
+  getJury() {
+      this.accountService.getJury().then(result => {
+        this.juryList = result.data;
+    })
+  }
+
+  isAdminFn() {
+    this.accountService.isAdmin().then(result => {
+      this.isAdmin = result.data;
+      if(this.isAdmin) {
+        this.getJury();
+      }
+    })
   }
 
 
