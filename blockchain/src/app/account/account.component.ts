@@ -24,6 +24,7 @@ export class AccountComponent implements OnInit {
   submitted = false;
   juryList: any;
   accountService: AccountService;
+  error: any;
 
   constructor(private formBuilder: FormBuilder, accountService: AccountService) {
     this.accountService = accountService;
@@ -51,10 +52,17 @@ export class AccountComponent implements OnInit {
       })
     })
   }
-  addJury(address: any) {
-    this.accountService.removeJury(address).then(() => {
+  addJury(address: any, name: any, image: any) {
+    this.error = null;
+    this.loading = true;
+    if(address.length === 0 || name.length === 0 || image.length === 0){
+      this.error = "some fields are empty"
+      this.loading = false;
+    }
+    this.accountService.addJury(address, name, image).then(() => {
       this.accountService.getJury().then(result => {
         this.juryList = result.data;
+        this.loading = false;
       })
     })
   }
@@ -75,4 +83,11 @@ export class AccountComponent implements OnInit {
   }
 
 
+  startSession() {
+
+  }
+
+  canAddJury(address: string) {
+    console.log(address.length)
+  }
 }
