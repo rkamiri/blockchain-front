@@ -55,14 +55,16 @@ export class AccountService {
       }));
   }
 
-  contractAddress: string ="0x5CC06a394CF4c297b44378334F981E8dBeE141bf";
+  contractAddress: string ="0xFF844a80832123721932B2Ef11e16A1cA1EC5Dd2";
 
   test(){
+    this.web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545/"));
+
     const currentUserAddress = localStorage.getItem('metamaskLogin');
+    console.log(currentUserAddress)
     this.contract = new this.web3.eth.Contract(abi, this.contractAddress);
-    console.log(this.contract.methods.owner.call({from: currentUserAddress}))
-    //this.contract.<methods.send(x,y,z)>
-    //this.contract.<methods.call(x,y,z)>
+    console.log(this.contract.methods.isOwner().send({from:currentUserAddress}))
+
   }
 
 }

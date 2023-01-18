@@ -76,18 +76,10 @@ export class AccountComponent implements OnInit {
   isAdminFn() {
     this.accountService.isAdmin().then(result => {
       this.isAdmin = result.data;
+
       if(this.isAdmin) {
-        this.getJury();
+        //this.getJury();
       }
     })
-  }
-
-
-  startSession() {
-
-  }
-
-  canAddJury(address: string) {
-    console.log(address.length)
   }
 }
