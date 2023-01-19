@@ -40,4 +40,34 @@ export class GamesService {
       });
     })
   }
+
+  getCurrentSessionId(): any {
+    return this.contract.methods.getCurrentVoteSessionId().call().then((data: any) => {
+      return data;
+    })
+  }
+
+  getActualRound(sessionId: any): any {
+      return this.contract.methods.getCurrentRound(sessionId).call().then((data: any) => {
+        return data;
+      })
+  }
+
+  getRoundResult(sessionId: any, roundId: any): any {
+    const account = localStorage.getItem("metamaskLogin");
+    return this.contract.methods.getCurrentRoundLeadingGames(sessionId, roundId).send({from: account}).then((data: any) => {
+        return data;
+      });
+  }
+
+  getCurrentVoteGame(sessionId: any): any {
+    const account = localStorage.getItem("metamaskLogin");
+    return this.contract.methods.getCurrentRoundVoteGameId(sessionId, account).call().then((gameId: any) => {
+      if(gameId) {
+        return this.contract.methods.getGameById(gameId).call().then((game: any) => {
+          return game;
+        });
+      }
+    });
+  }
 }

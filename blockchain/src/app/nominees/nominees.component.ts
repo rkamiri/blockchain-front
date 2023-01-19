@@ -9,11 +9,23 @@ import {GamesService} from "../services/games.service";
 export class NomineesComponent implements OnInit {
   private gameService :GamesService;
   games: any = [];
-
+  sessionId: any;
+  roundId: any;
+  canVote = true;
   constructor(gameService: GamesService) {
     this.gameService = gameService
     this.gameService.getAllGames().then((data: any) => {
       this.games = data;
+    })
+
+    this.gameService.getCurrentSessionId().then((data: any) => {
+      this.sessionId = data;
+      this.gameService.getActualRound(data).then((dataR: any) => {
+        this.roundId = dataR;
+        if(this.roundId <1){
+          this.canVote = false;
+        }
+      })
     })
   }
 
@@ -26,4 +38,6 @@ export class NomineesComponent implements OnInit {
     })
     console.log(gameId)
   }
+
+
 }

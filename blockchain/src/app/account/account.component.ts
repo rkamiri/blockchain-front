@@ -27,12 +27,28 @@ export class AccountComponent implements OnInit {
   accountService: AccountService;
   error: any;
   private gameService: GamesService;
+  private sessionId: any;
+  roundId: any;
+  votedGame: any;
 
   constructor(private formBuilder: FormBuilder, accountService: AccountService, gameService: GamesService) {
     this.accountService = accountService;
     this.gameService = gameService;
     this.accountService.isOwner().then((result: any) => {
       this.isAdmin = result;
+    })
+    this.gameService.getCurrentSessionId().then((data: any) => {
+      this.sessionId = data;
+      this.gameService.getActualRound(data).then((dataR: any) => {
+        this.roundId = dataR;
+        if (this.roundId < 1) {
+          this.hasVote = false;
+        } else {
+          this.gameService.getCurrentVoteGame(this.sessionId).then((result: any) => {
+            this.votedGame = result;
+          })
+        }
+      })
     })
   }
 

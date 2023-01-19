@@ -24,7 +24,7 @@
   </div>
   <div *ngIf="hasVote">
     <h2>Current vote</h2>
-    <p>You have voted for XYZ ... for phase 1</p>
+    <p>You have voted for {{votedGame.name}} for round {{roundId}}</p>
   </div>
 
   <div *ngIf="!canAddGame">
