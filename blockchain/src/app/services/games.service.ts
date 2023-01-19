@@ -70,4 +70,20 @@ export class GamesService {
       }
     });
   }
+
+  startSession(sessionId: any): any {
+    const account = localStorage.getItem("metamaskLogin");
+    return this.contract.methods.startVoteSession(sessionId).then((result: any) => {
+      return result;
+    });
+
+  }
+
+  goNextRound(sessionId: any): any {
+    const account = localStorage.getItem("metamaskLogin");
+    return this.contract.methods.passToNextRound(sessionId).then((result: any) => {
+      return result;
+    });
+
+  }
 }

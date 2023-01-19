@@ -122,4 +122,16 @@ export class AccountComponent implements OnInit {
       });
     }
   }
+
+  startSession() {
+    this.gameService.startSession(this.sessionId).then((result: any) => {
+      alert("session started");
+    })
+  }
+
+  nextRound() {
+    this.gameService.goNextRound(this.sessionId).then((result: any) => {
+      alert("next round selected");
+    })
+  }
 }

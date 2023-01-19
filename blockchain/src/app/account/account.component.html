@@ -1,10 +1,10 @@
 <div style="margin: auto; width: 80%; background-color: black">
   <div *ngIf="isAdmin">
     <h2>Start Game Award new Session</h2>
-    <button>Start Session</button>
+    <button (click)="startSession()">Start Session</button>
     <hr>
     <h2>Session next round</h2>
-    <button>Next round / draw current</button>
+    <button (click)="nextRound()">Next round / draw current</button>
     <hr>
     <h2>Add a new jury</h2>
     <input class="input-group-lg " #juryToAdd required placeholder="MetaMask Id : 0x...">
@@ -13,7 +13,7 @@
     <button [disabled]="loading" (click)="addJury(juryToAdd.value.toString(), juryToAddName.value.toString(), juryToAddImage.value.toString())">Add</button>
     <p *ngIf="error" style="color: red">{{error}}</p>
     <h2>Remove a jury member</h2>
-    <p *ngFor="let jury of juryList">FDP {{jury.name}}
+    <p *ngFor="let jury of juryList">{{jury.name}}
       <mat-icon style="color: red; vertical-align: middle; cursor:pointer;" (click)="removeJury(jury.address)">highlight_off</mat-icon>
     </p>
   </div>
