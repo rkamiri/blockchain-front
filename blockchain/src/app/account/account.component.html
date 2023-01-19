@@ -17,9 +17,22 @@
       <mat-icon style="color: red; vertical-align: middle; cursor:pointer;" (click)="removeJury(jury.address)">highlight_off</mat-icon>
     </p>
   </div>
+  <div *ngIf="!hasVote">
+    <br><br><br><br><br><br>
+    <h2>Current vote</h2>
+    <p>you did not vote yet</p>
+  </div>
   <div *ngIf="hasVote">
     <h2>Current vote</h2>
     <p>You have voted for XYZ ... for phase 1</p>
+  </div>
+
+  <div *ngIf="!canAddGame">
+    <br><br><br>
+
+    <h2>You cant add a new game</h2>
+    <p>It's too late to add a game, come at a later date</p>
+    <br><br><br><br><br><br>
   </div>
   <div *ngIf="canAddGame">
     <h2>Add a game</h2>
@@ -68,14 +81,14 @@
 
       <div class="form-group">
         <label for="imageUrl">Image URL :</label>
-        <input type="text" id="imageUrl" formControlName="platform" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['imageUrl'].errors }" />
+        <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['imageUrl'].errors }" />
         <div *ngIf="submitted && f['imageUrl'].errors" class="invalid-feedback">
           <div *ngIf="f['imageUrl'].errors['required']">Image URL is required</div>
         </div>
       </div>
 
       <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">Send</button>
+        <button [disabled]="loading" (click)="addGame()" class="btn btn-primary">Send</button>
       </div>
     </form>
   </div>

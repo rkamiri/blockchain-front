@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AccountService} from "../services/account.service";
+import {GamesService} from "../services/games.service";
 
 @Component({
   selector: 'app-account',
@@ -8,9 +9,9 @@ import {AccountService} from "../services/account.service";
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent implements OnInit {
-  isAdmin: any = true;
-  hasVote: any = true;
-  canAddGame: any = true;
+  isAdmin: any = false;
+  hasVote: any = false;
+  canAddGame: any = false;
   title: any;
   form: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
@@ -25,15 +26,24 @@ export class AccountComponent implements OnInit {
   juryList: any;
   accountService: AccountService;
   error: any;
+  private gameService: GamesService;
 
-  constructor(private formBuilder: FormBuilder, accountService: AccountService) {
+  constructor(private formBuilder: FormBuilder, accountService: AccountService, gameService: GamesService) {
     this.accountService = accountService;
+    this.gameService = gameService;
+    this.accountService.isOwner().then((result: any) => {
+      this.isAdmin = result;
+    })
   }
 
   ngOnInit(): void {
-    this.isAdminFn();
+
   }
-  get f() { return this.form.controls; }
+
+  get f() {
+    return this.form.controls;
+  }
+
   onSubmit() {
     this.submitted = true;
 
@@ -46,40 +56,54 @@ export class AccountComponent implements OnInit {
 
 
   removeJury(address: any) {
-    this.accountService.removeJury(address).then(() => {
-      this.accountService.getJury().then(result => {
-        this.juryList = result;
-      })
-    })
+    /* this.accountService.removeJury(address).then(() => {
+       this.accountService.getJury().then(result => {
+         this.juryList = result;
+       })
+     })*/
   }
+
   addJury(address: any, name: any, image: any) {
-    this.error = null;
-    this.loading = true;
-    if(address.length === 0 || name.length === 0 || image.length === 0){
-      this.error = "some fields are empty"
-      this.loading = false;
-    }
-    this.accountService.addJury(address, name, image).then(() => {
-      this.accountService.getJury().then(result => {
-        this.juryList = result.data;
-        this.loading = false;
-      })
-    })
+    /* this.error = null;
+     this.loading = true;
+     if(address.length === 0 || name.length === 0 || image.length === 0){
+       this.error = "some fields are empty"
+       this.loading = false;
+     }
+     this.accountService.addJury(address, name, image).then(() => {
+       this.accountService.getJury().then(result => {
+         this.juryList = result.data;
+         this.loading = false;
+       })
+     })*/
   }
 
   getJury() {
-      this.accountService.getJury().then(result => {
-        this.juryList = result.data;
-    })
+    /*this.accountService.getJury().then(result => {
+      this.juryList = result.data;
+  })*/
   }
 
-  isAdminFn() {
-    this.accountService.isAdmin().then(result => {
-      this.isAdmin = result.data;
-
-      if(this.isAdmin) {
-        //this.getJury();
-      }
-    })
+  addGame() {
+    if (this.form.get("name")?.hasError('required') ||
+      this.form.get("platform")?.hasError('required') ||
+      this.form.get("price")?.hasError('required') ||
+      this.form.get("description")?.hasError('required') ||
+      this.form.get("releaseDate")?.hasError('required') ||
+      this.form.get("imageUrl")?.hasError('required')
+    ) {
+      alert("need all inputs to be completed")
+      return;
+    }
+    if (confirm("Are you sure ?")) {
+      this.gameService.addGame(this.form.get('name')?.value, this.form.get('platform')?.value, this.form.get('price')?.value, this.form.get('description')?.value,
+        this.form.get('releaseDate')?.value, this.form.get('imageUrl')?.value).then((data: any) => {
+        if (data.id) {
+          console.log("added game");
+          alert("Added Game");
+          location.href = '/nominees';
+        }
+      });
+    }
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {Title} from "@angular/platform-browser";
-import {AccountService} from "../services/account.service";
 
 @Component({
   selector: 'app-home',
@@ -24,8 +23,7 @@ export class HomeComponent implements OnInit {
     this.state++;
   }
 
-  constructor(private titleService:Title, accountService: AccountService) {
-    accountService.test()
+  constructor(private titleService:Title) {
     this.titleService.setTitle("The game awards");
   }
 
